@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* css var */
+:root {
+  --primary-color: #880aff;
+}
+
+/* theme variable  */
+@theme {
+  --color-dark: #101010;
+  --color-light: #EEEEEE;
+  --default-transition-duration: 0.5s;
+  --color-primary: var(--primary-color);
+}
+
+/* fonts */
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../fonts/MuseoModerno-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../fonts/MuseoModerno-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../fonts/MuseoModerno-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../fonts/MuseoModerno-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../fonts/MuseoModerno-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+body {
+  font-family: "MuseoModerno", sans-serif;
+}
+
+/* social icon svg */
+.social svg {
+  @apply fill-black dark:fill-white md:h-6 h-5.5;
+}
+
+/* testimonial card active */
+#testimonial .swiper-slide-active {
+  @apply border-2 border-primary/20;
+}
+
+/* navbar active */
+.active-nav-links {
+  @apply text-primary;
+}
