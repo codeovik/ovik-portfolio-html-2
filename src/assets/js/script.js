@@ -178,11 +178,13 @@ function revealSection(selector, options = {}) {
 function openVideoModal(el) {
   document.querySelector("#popUpVideoModal iframe").src = "https://www.youtube.com/embed/" + el.getAttribute("data-youtube-video-embed-key");
   document.getElementById("popUpVideoModal").classList.remove("hidden");
+  document.getElementById("popUpVideoModal").classList.add("flex");
 }
 
 // video close
 document.querySelector("#popUpVideoModal button").addEventListener("click", () => {
   document.getElementById("popUpVideoModal").classList.add("hidden");
+  document.getElementById("popUpVideoModal").classList.remove("flex");
   document.querySelector("#popUpVideoModal iframe").src = "";
 });
 
@@ -677,9 +679,11 @@ document.querySelector("form a").addEventListener("click", function (e) {
   });
   localStorage.setItem("contactDraft", JSON.stringify(data));
   document.getElementById("formPopup").classList.remove("hidden");
+  document.getElementById("formPopup").classList.add("flex");
 });
 document.querySelector("#formPopup button").addEventListener("click", () => {
   document.getElementById("formPopup").classList.add("hidden");
+  document.getElementById("formPopup").classList.remove("flex");
 });
 
 // apply draft data from local storage
@@ -723,9 +727,11 @@ document.querySelector("form").addEventListener('submit', function(e) {
     .then(response => response.json())
     // success responce
     .then(data => {
-    document.getElementById("formSubmitSuccess").classList.remove("hidden"); // open success modal
-    document.querySelector("#formSubmitSuccess button").addEventListener("click", () => { // close success modal
+    document.getElementById("formSubmitSuccess").classList.remove("hidden");
+    document.getElementById("formSubmitSuccess").classList.add("flex");
+    document.querySelector("#formSubmitSuccess button").addEventListener("click", () => {
       document.getElementById("formSubmitSuccess").classList.add("hidden");
+      document.getElementById("formSubmitSuccess").classList.remove("flex");
     });
     localStorage.removeItem("contactDraft"); // remove draft from local storage
     document.querySelector("form").reset(); // reset form
