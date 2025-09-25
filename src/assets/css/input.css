@@ -1,16 +1,19 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* css var */
+/* css varriable */
 :root {
-  --primary-color: #880aff;
+  --primary-color: #880aff; /* brand color */
+  --dark-color: #101010; /* elements background for dark mode */
+  --light-color: #eeeeee; /* elements background for light mode */
+  --animation-duration: 0.5s; /* default animation duration */
 }
 
 /* theme variable  */
 @theme {
-  --color-dark: #101010;
-  --color-light: #EEEEEE;
-  --default-transition-duration: 0.5s;
+  --color-dark: var(--dark-color);
+  --color-light: var(--light-color);
+  --default-transition-duration: var(--animation-duration);
   --color-primary: var(--primary-color);
 }
 
