@@ -338,7 +338,7 @@ document.fonts.ready.then(() => {
     }
   });
   // social icons animation
-  gsap.from("header div div:nth-of-type(1) a", {
+  gsap.from("header .social a", {
     opacity: 0,
     delay: 2.7,
     stagger: 0.2,
@@ -346,11 +346,11 @@ document.fonts.ready.then(() => {
     x: 100
   })
   // button animation
-  gsap.set("header div div:nth-of-type(2) a", {
+  gsap.set("header .button-container a", {
     opacity: 0,
     x: 100,
   })
-  gsap.to("header div div:nth-of-type(2) a", {
+  gsap.to("header .button-container a", {
     opacity: 1,
     delay: 2.9,
     stagger: 0.2,
@@ -413,15 +413,17 @@ document.querySelectorAll('[data-target-number]').forEach(function (el) {
 });
 
 // headline animation
-gsap.from(new SplitText("#achievements h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#achievements h2",
-    start: "top 80%",
-    end: "top 15%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#achievements h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#achievements h2",
+      start: "top 80%",
+      end: "top 15%",
+      scrub: 1,
+    },
+  });
 });
 
 
@@ -442,15 +444,17 @@ var swiper = new Swiper(".logo-slide", {
 });
 
 // headline animation
-gsap.from(new SplitText("#colaborate h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#colaborate h2",
-    start: "top 80%",
-    end: "top 15%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#colaborate h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#colaborate h2",
+      start: "top 80%",
+      end: "top 15%",
+      scrub: 1,
+    },
+  });
 });
 
 
@@ -470,15 +474,17 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
 })
 
 // headline animation
-gsap.from(new SplitText("#exprience h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#exprience h2",
-    start: "top 80%",
-    end: "top 5%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#exprience h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#exprience h2",
+      start: "top 80%",
+      end: "top 5%",
+      scrub: 1,
+    },
+  });
 });
 
 // items scroll animation
@@ -501,15 +507,17 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
 })
 
 // headilne animation
-gsap.from(new SplitText("#portfolio h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#portfolio h2",
-    start: "top 80%",
-    end: "top 5%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#portfolio h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#portfolio h2",
+      start: "top 80%",
+      end: "top 5%",
+      scrub: 1,
+    },
+  });
 });
 
 // image parallax
@@ -552,15 +560,17 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
 })
 
 // headline animation
-gsap.from(new SplitText("#plan h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#plan h2",
-    start: "top 80%",
-    end: "top 5%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#plan h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#plan h2",
+      start: "top 80%",
+      end: "top 5%",
+      scrub: 1,
+    },
+  });
 });
 
 // tab logic
@@ -593,15 +603,17 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
 })
 
 // headline animation
-gsap.from(new SplitText("#testimonial h2", { type: "words, chars" }).chars, {
-  stagger: 0.3,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#testimonial h2",
-    start: "top 80%",
-    end: "top 5%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#testimonial h2", { type: "words, chars" }).chars, {
+    stagger: 0.3,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#testimonial h2",
+      start: "top 80%",
+      end: "top 5%",
+      scrub: 1,
+    },
+  });
 });
 
 // slide logic
@@ -633,15 +645,17 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
 })
 
 // headline animation
-gsap.from(new SplitText("#tech-stack h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#tech-stack h2",
-    start: "top 80%",
-    end: "top 5%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#tech-stack h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#tech-stack h2",
+      start: "top 80%",
+      end: "top 5%",
+      scrub: 1,
+    },
+  });
 });
 
 // items scroll animation
@@ -680,15 +694,17 @@ if (saved) {
 }
 
 // headline animation
-gsap.from(new SplitText("#contact h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#contact h2",
-    start: "top 80%",
-    end: "top 15%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#contact h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#contact h2",
+      start: "top 80%",
+      end: "top 15%",
+      scrub: 1,
+    },
+  });
 });
 
 // items scroll animation
@@ -738,15 +754,17 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
 })
 
 // headline animation
-gsap.from(new SplitText("#faq h2", { type: "words, chars" }).chars, {
-  stagger: 0.1,
-  opacity: 0.3,
-  scrollTrigger: {
-    trigger: "#faq h2",
-    start: "top 80%",
-    end: "top 5%",
-    scrub: 1,
-  },
+document.fonts.ready.then(() => {
+  gsap.from(new SplitText("#faq h2", { type: "words, chars" }).chars, {
+    stagger: 0.1,
+    opacity: 0.3,
+    scrollTrigger: {
+      trigger: "#faq h2",
+      start: "top 80%",
+      end: "top 5%",
+      scrub: 1,
+    },
+  });
 });
 
 // faq toggle
