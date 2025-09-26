@@ -1,30 +1,22 @@
-// gsap initialization
+// gsap plugin initialization
 gsap.registerPlugin(SplitText, ScrollTrigger);
-
 
 // get primary color from css variable
 let primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
 
-
 /****************************************
 **** dark mode ****
 ****************************************/
-const html = document.documentElement;
 
 // get theme from local storage
 if (localStorage.getItem("theme") === "dark") {
-  html.classList.add("dark");
+  document.documentElement.classList.add("dark");
 }
 
-// toggle dark mode
+// when click dark/light mode button
 document.getElementById("darkToggle").addEventListener("click", () => {
-  html.classList.toggle("dark");
-  if (html.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  }
-  else {
-    localStorage.setItem("theme", "light");
-  }
+  document.documentElement.classList.toggle("dark"); // toggle "dark" class in html tag
+  document.documentElement.classList.contains("dark") ? localStorage.setItem("theme", "dark") : localStorage.setItem("theme", "light"); // save theme in local store
 });
 
 
@@ -45,12 +37,12 @@ document.addEventListener("mousemove", (e) => {
 
 // hover on buttons and links
 document.querySelectorAll("button, a").forEach(e => {
-  e.addEventListener("mousemove", (e) => {
+  e.addEventListener("mousemove", (e) => { // when mouse enter
     gsap.to("#cursorFollower", {
       scale: 0,
     });
   });
-  e.addEventListener("mouseleave", (e) => {
+  e.addEventListener("mouseleave", (e) => { // when mouse leave
     gsap.to("#cursorFollower", {
       scale: 1,
     });
@@ -58,7 +50,7 @@ document.querySelectorAll("button, a").forEach(e => {
 });
 
 // hover on portfolio image
-document.querySelectorAll("#portfolio article img").forEach(e => {
+document.querySelectorAll("#portfolio article img").forEach(e => { // when mouse enter
   e.addEventListener("mousemove", (e) => {
     document.querySelector("#cursorFollower").innerHTML = `<p class="text-[3px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">View More</p>`;
     gsap.to("#cursorFollower", {
@@ -67,7 +59,7 @@ document.querySelectorAll("#portfolio article img").forEach(e => {
       backgroundColor: primaryColor + "50",
     });
   });
-  e.addEventListener("mouseleave", (e) => {
+  e.addEventListener("mouseleave", (e) => { // when mouse leave
     document.querySelector("#cursorFollower").innerHTML = "";
     gsap.to("#cursorFollower", {
       scale: 1,
@@ -121,22 +113,21 @@ requestAnimationFrame(raf);
 const goTopBtn = document.getElementById("goTopBtn");
 const scrollProgress = document.getElementById("scrollProgress");
 lenis.on("scroll", () => {
-  const scrollTop = lenis.scroll;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrolled = (scrollTop / docHeight) * 100;
-  scrollProgress.style.height = `${scrolled}%`;
-  // show
+  const scrollTop = lenis.scroll; // smooth scroll
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight; // top to present total height
+  scrollProgress.style.height = (scrollTop / docHeight) * 100 + "%"; // scroll progress
+  // show button
   if (scrollTop > 250) {
     goTopBtn.classList.remove("opacity-0", "translate-y-10", "pointer-events-none");
     goTopBtn.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
   }
-  // hide
+  // hide button
   else {
     goTopBtn.classList.add("opacity-0", "translate-y-10", "pointer-events-none");
     goTopBtn.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
   }
 });
-// go top on click
+// when click tot go top button
 goTopBtn.addEventListener("click", () => {
   lenis.scrollTo(0, { duration: 1.5, easing: (t) => t * (2 - t) });
 });
@@ -193,7 +184,8 @@ document.querySelector("#popUpVideoModal button").addEventListener("click", () =
 **** navbar ****
 ****************************************/
 
-let menuTimeLine = gsap.timeline(); // menu timeline
+// menu timeline
+let menuTimeLine = gsap.timeline();
 
 // body blur and prepare for click
 menuTimeLine.to("#menuContainer", {
@@ -266,7 +258,9 @@ menuTimeLine.reverse(); // off timeline by default
 
 // menu toggle in button
 document.getElementById("toggleMenu").addEventListener("click", () => {
-  menuTimeLine.reversed() ? lenis.stop() : lenis.start(); // stop/start scroll
+  gsap.matchMedia().add("(min-width: 1024px)", () => {
+    menuTimeLine.reversed() ? lenis.stop() : lenis.start(); // stop/start scroll for equal or more than 1024px width devices
+  });
   menuTimeLine.reversed() ? menuTimeLine.play() : menuTimeLine.reverse(); // play/reverse timeline
   menuTimeLine.reversed() ? document.body.classList.remove("overflow-y-hidden") : document.body.classList.add("overflow-y-hidden"); // hide/show body scroll
 });
