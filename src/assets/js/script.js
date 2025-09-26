@@ -64,7 +64,7 @@ document.querySelectorAll("#portfolio article img").forEach(e => { // when mouse
     gsap.to("#cursorFollower", {
       scale: 1,
       backdropFilter: "blur(0px)",
-      backgroundColor: "rgba(255, 255, 255, 0.5)",
+      backgroundColor: "#757575",
     });
   });
 });
