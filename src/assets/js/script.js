@@ -424,7 +424,7 @@ document.fonts.ready.then(() => {
 
 
 /****************************************
-**** colaborate section ****
+**** partner section ****
 ****************************************/
 
 // logo slide
@@ -441,11 +441,11 @@ var swiper = new Swiper(".logo-slide", {
 
 // headline animation
 document.fonts.ready.then(() => {
-  gsap.from(new SplitText("#colaborate h2", { type: "words, chars" }).chars, {
+  gsap.from(new SplitText("#partner h2", { type: "words, chars" }).chars, {
     stagger: 0.1,
     opacity: 0.3,
     scrollTrigger: {
-      trigger: "#colaborate h2",
+      trigger: "#partner h2",
       start: "top 80%",
       end: "top 15%",
       scrub: 1,
