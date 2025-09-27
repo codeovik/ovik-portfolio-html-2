@@ -76,9 +76,9 @@
             <!-- menubar conatiner -->
             <div id="menuBar" class="fixed top-0 -right-full h-dvh bg-white dark:bg-[#030303] min-[450px]:w-100 w-9/10 z-4 p-10 overflow-y-scroll [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-primary/50 [&::-webkit-scrollbar-thumb]:rounded-full">
                  <!-- dark/light mode toggle -->
-                <button id="darkToggle" class="aspect-square rounded-full cursor-pointer bg-light hover:bg-light/70 dark:bg-dark dark:hover:bg-dark/70 h-12 p-3 flex items-center justify-center transform -translate-y-5">
-                    <svg class="fill-white -rotate-35 aspect-square hidden w-full dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
-                    <svg class="dark:hidden fill-black aspect-square w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
+                <button id="darkToggle" class="aspect-square rounded-full cursor-pointer bg-light hover:bg-light/70 dark:bg-dark dark:hover:bg-dark/70 h-9 md:h-12 p-3 flex items-center justify-center transform -translate-y-5">
+                    <svg class="fill-white -rotate-35 aspect-square hidden w-full dark:block scale-160 md:scale-e100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
+                    <svg class="dark:hidden fill-black aspect-square w-full scale-160 md:scale-e100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
                 </button>
                 <!-- menu title -->
                 <p id="manuTitle1" class="before:absolute before:aspect-square before:h-1 before:bg-black dark:before:bg-white relative pl-5 before:transform before:-translate-y-1/2 before:top-1/2 before:left-0 before:rounded-full">Menu</p>
@@ -262,8 +262,8 @@
                     <h2 class="md:text-7xl text-4xl text-center lg:text-left md:font-medium">Work Experience Highlights</h2>
                     <p class="mt-3 text-sm md:text-base opacity-80">With years of hands-on experience, I have collaborated with diverse clients and brands worldwide, building responsive, user-friendly, and scalable web solutions that combine creativity, performance, and modern technologies.</p>
                 </div>
+                <!-- exprience items -->
                 <div class="main-content space-y-5">
-                    <!-- exprience 1 -->
                     <div class="content flex flex-col md:flex-row justify-between gap-2 dark:bg-dark dark:hover:bg-dark/70 bg-light hover:bg-light/70 rounded-2xl md:rounded-3xl transition-all p-5 md:p-10">
                         <div class="">
                             <h4 class="text-3xl md:text-5xl font-medium">Video editor</h4>
@@ -274,7 +274,6 @@
                             <p class="rounded-full w-max text-sm md:text-base whitespace-nowrap bg-black/10 dark:bg-white/10 px-4 py-1">2015 - 2016</p>
                         </div>
                     </div>
-                    <!-- exprience 2 -->
                     <div class="content flex flex-col md:flex-row justify-between gap-2 dark:bg-dark dark:hover:bg-dark/70 bg-light hover:bg-light/70 rounded-2xl md:rounded-3xl transition-all p-5 md:p-10">
                         <div class="">
                             <h4 class="text-3xl md:text-5xl font-medium">Exclusive Officer</h4>
@@ -285,7 +284,6 @@
                             <p class="rounded-full w-max text-sm md:text-base whitespace-nowrap bg-black/10 dark:bg-white/10 px-4 py-1">2018 - 2021</p>
                         </div>
                     </div>
-                    <!-- exprience 3 -->
                     <div class="content flex flex-col md:flex-row justify-between gap-2 dark:bg-dark dark:hover:bg-dark/70 bg-light hover:bg-light/70 rounded-2xl md:rounded-3xl transition-all p-5 md:p-10">
                         <div class="">
                             <h4 class="text-3xl md:text-5xl font-medium">Front end developer</h4>
@@ -296,7 +294,6 @@
                             <p class="rounded-full w-max text-sm md:text-base whitespace-nowrap bg-black/10 dark:bg-white/10 px-4 py-1">2021 - 2023</p>
                         </div>
                     </div>
-                    <!-- exprience 4 -->
                     <div class="content flex flex-col md:flex-row justify-between gap-2 dark:bg-dark dark:hover:bg-dark/70 bg-light hover:bg-light/70 rounded-2xl md:rounded-3xl transition-all p-5 md:p-10">
                         <div class="">
                             <h4 class="text-3xl md:text-5xl font-medium">Video editor</h4>
@@ -631,31 +628,31 @@
                 Get in touch with us to share your ideas, ask questions, or start a project—we’re here to help anytime!
             </h2>
             <!-- form -->
-            <form class="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-2 gap-y-8 md:gap-y-15 gap-x-5 md:gap-x-10 text-xl md:text-3xl mt-8">
+            <form class="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-15 gap-x-5 md:gap-x-10 text-xl md:text-3xl mt-8">
                 <!-- input fields -->
-                <input required name="name" id="formName" type="text" placeholder="Your Name*" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative">
-                <input name="company name" type="text" placeholder="Your Company" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative">
+                <input required name="name" id="formName" type="text" placeholder="Your Name*" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative w-full">
+                <input name="company name" type="text" placeholder="Your Company" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative w-full">
                 <input required name="email" type="email" placeholder="Your Email*" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative">
                 <input name="phone" id="formPhone" type="tel" placeholder="Your Phone" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative">
-                <textarea required name="message" rows="4" placeholder="Your Message*" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative col-span-2"></textarea>
+                <textarea required name="message" rows="4" placeholder="Your Message*" class="focus:outline-none z-2 border-b-2 dark:focus:border-white focus:border-black dark:border-white/50 border-black/50 relative md:col-span-2"></textarea>
                 <!-- formsubmit.co api config -->
                 <input type="hidden" name="_subject" value="New submission from your portfolio website!">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_autoresponse" value="your custom message">
                 <!-- buttons -->
-                <div class="flex justify-between col-span-2 text-base -mt-5">
+                <div class="flex justify-between md:col-span-2 text-base -mt-5">
                     <a class="px-7 cursor-pointer flex gap-1 group w-max py-3 bg-primary hover:bg-primary/70 transition-all items-center rounded-full">
                         <span>Save Draft</span>
                         <span class="relative overflow-hidden">
-                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform group-hover:translate-x-7 ease-out transition-all group-hover:-translate-y-7 group-hover:opacity-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
-                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform -translate-x-7 top-0 letf-0 absolute group-hover:translate-x-0 transition-all translate-y-7 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
+                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform group-hover:translate-x-7 ease-out transition-all group-hover:-translate-y-7 group-hover:opacity-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
+                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform -translate-x-7 top-0 letf-0 absolute group-hover:translate-x-0 transition-all translate-y-7 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
                         </span>
                     </a>
                     <button type="submit" class="px-7 cursor-pointer flex gap-1 group w-max py-3 bg-primary hover:bg-primary/70 transition-all items-center rounded-full">
                         <span>Submit</span>
                         <span class="relative overflow-hidden">
-                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform group-hover:translate-x-7 ease-out transition-all group-hover:-translate-y-7 group-hover:opacity-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
-                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform -translate-x-7 top-0 letf-0 absolute group-hover:translate-x-0 transition-all translate-y-7 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
+                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform group-hover:translate-x-7 ease-out transition-all group-hover:-translate-y-7 group-hover:opacity-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
+                            <svg class="h-5 dark:fill-white fill-black rotate-45 group-hover:transform -translate-x-7 top-0 letf-0 absolute group-hover:translate-x-0 transition-all translate-y-7 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
                         </span>
                     </button>
                 </div>
