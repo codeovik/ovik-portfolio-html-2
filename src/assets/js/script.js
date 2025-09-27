@@ -725,7 +725,8 @@ document.querySelector("form").addEventListener('submit', function (event) {
   // disable submit button
   const submitBtn = event.target.querySelector("button[type='submit']");
   submitBtn.disabled = true;
-  submitBtn.classList.add("opacity-50", "cursor-not-allowed");
+  submitBtn.classList.add("opacity-50");
+  submitBtn.style.cursor = "not-allowed";
   submitBtn.querySelector("span:nth-of-type(1)").textContent = "Sending Data...";
   // off page load
   event.preventDefault();
@@ -752,7 +753,8 @@ document.querySelector("form").addEventListener('submit', function (event) {
     document.querySelector("form").reset();
     // default submit button
     submitBtn.disabled = false;
-    submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+    submitBtn.classList.remove("opacity-50");
+    submitBtn.style.cursor = "pointer";
     submitBtn.querySelector("span:nth-of-type(1)").textContent = "Send Another";
   })
   // error responce
