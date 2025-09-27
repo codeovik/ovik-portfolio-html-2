@@ -708,32 +708,56 @@ document.fonts.ready.then(() => {
 // items scroll animation
 revealSection('form input, form textarea');
 
-// formsubmit.co ajax responce
-document.querySelector("form").addEventListener('submit', function(e) {
-  e.preventDefault(); // no page refresh
-  fetch('https://formsubmit.co/ajax/ovikbiswas01@gmail.com', {
-    method: 'POST',
-    body: new FormData(document.querySelector("form")), // get data for send
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-    .then(response => response.json())
+
+// form send to EmailJS
+// emailjs varriable
+const emailjsPublicKey = "fw1Kyv4KqIc1NfcYf";
+const emailjsServiceId = "service_0ojb872";
+const emailjsTemplateId = "template_epzhhbl";
+
+// Initialize emailjs
+(function () {
+    emailjs.init(emailjsPublicKey);
+})();
+
+// when click to submit button
+document.querySelector("form").addEventListener('submit', function (event) {
+  // disable submit button
+  const submitBtn = event.target.querySelector("button[type='submit']");
+  submitBtn.disabled = true;
+  submitBtn.classList.add("opacity-50", "cursor-not-allowed");
+  submitBtn.querySelector("span:nth-of-type(1)").textContent = "Sending Data...";
+  // off page load
+  event.preventDefault();
+  // get data from html
+  const formData = {
+    to_name: "Admin",
+    user_name: document.getElementById('userName').value,
+    user_company: document.getElementById('userCompany').value,
+    user_email: document.getElementById('userEmail').value,
+    user_phone: document.getElementById('userPhone').value,
+    user_message: document.getElementById('userMessage').value,
+  };
+  // send
+  emailjs.send(emailjsServiceId, emailjsTemplateId, formData).then(function (res) {
     // success responce
-    .then(data => {
+    // show pop up
     document.getElementById("formSubmitSuccess").classList.remove("hidden");
     document.getElementById("formSubmitSuccess").classList.add("flex");
     document.querySelector("#formSubmitSuccess button").addEventListener("click", () => {
       document.getElementById("formSubmitSuccess").classList.add("hidden");
       document.getElementById("formSubmitSuccess").classList.remove("flex");
     });
-    localStorage.removeItem("contactDraft"); // remove draft from local storage
-    document.querySelector("form").reset(); // reset form
-    })
-    // error responce
-  .catch(error => {
-    alert("Something went wrong! Please see the console for more info.");
-    console.error(error);
+    // form reset
+    document.querySelector("form").reset();
+    // default submit button
+    submitBtn.disabled = false;
+    submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+    submitBtn.querySelector("span:nth-of-type(1)").textContent = "Send Another";
+  })
+  // error responce
+  .catch(function (error) {
+    alert('Failed to submit: ' + error);
   });
 });
 
@@ -769,7 +793,7 @@ document.fonts.ready.then(() => {
 
 // faq toggle
 document.querySelectorAll(".faq-question").forEach((question) => {
-  question.addEventListener("click", () => {
+  question.addEventListener("click", () => { // when click to any faq
     const answer = question.nextElementSibling; // get corresponding answer
     const icon = question.querySelector(".icon"); // get icon
     // show answer
