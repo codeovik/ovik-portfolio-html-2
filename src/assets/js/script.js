@@ -711,9 +711,9 @@ revealSection('form input, form textarea');
 
 // form send to EmailJS
 // emailjs varriable
-const emailjsPublicKey = "fw1Kyv4KqIc1NfcYf";
-const emailjsServiceId = "service_0ojb872";
-const emailjsTemplateId = "template_epzhhbl";
+const emailjsPublicKey = "YOUR_EMAIL_JS_PUBLIC_KEY_HERE";
+const emailjsServiceId = "YOUR_EMAIL_JS_SERVICE_ID_HERE";
+const emailjsTemplateId = "YOUR_EMAIL_JS_TEMPLATE_ID_HERE";
 
 // Initialize emailjs
 (function () {
